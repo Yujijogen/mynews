@@ -12,3 +12,6 @@
         <h1>edit</h1>
     </body>
 </html>
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('news/create', 'Admin\NewsController@add')->middleware('auth');
+});
